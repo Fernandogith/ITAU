@@ -1,1 +1,1 @@
-"use strict";var number=32;console.log("buttons"),console.log("buttons2"),console.log("modal");
+"use strict";console.log("modal");

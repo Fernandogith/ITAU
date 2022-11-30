@@ -1,6 +1,83 @@
-body {
-    background-color: rgb(28, 134, 221);
-    font-size: 62.5%;
-    color: blue($color: #000000);
-    font-weight: 800;
+.hero {
+    width: 100%;
+    height: 70.4rem;
+    margin-top: 8rem;
+    background: url("../assets/img/background_full.png") no-repeat;
+    .container {
+        display: flex;
+        height: 100%;
+        .left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10.5rem;
+            padding-bottom: 19rem;
+            h1 {
+                width: 100%;
+                max-width: 52rem;
+                max-height: 23.7rem;
+                margin-bottom: 1.6rem;
+                font-weight: 600;
+            }
+            p {
+                width: 100%;
+                max-width: 40.8rem;
+                font-weight: 300;
+                font-size: 1.9rem;
+                color: #FFFFFF;
+                margin-bottom: 3.2rem;
+            }
+            .download {
+                display: flex;
+                width: 100%;
+                gap: 1.6rem;
+                .apple {
+                    border: 1px solid #FFFFFF;
+                    border-radius: 8px;
+                    display: flex;
+                    padding: 15px 23px;
+                    span {
+                        font-weight: 400;
+                        font-size: 1.3rem;
+                        color: #FFFFFF;
+                        margin-left: 1.2rem;
+                        strong {
+                            font-size: 1.5rem; 
+                        }
+                    }
+                }
+                .play {
+                    border: 1px solid #FFFFFF;
+                    border-radius: 8px;
+                    display: flex;
+                    padding: 1.5rem 2.3rem;
+                    
+                    span {
+                        font-weight: 400;
+                        font-size: 1.3rem;
+                        color: #FFFFFF;
+                        margin-left: 1.2rem;
+                        strong {
+                            font-size: 1.5rem; 
+                        }
+                    }
+                }
+            }
+            .continue_explorando {
+                margin-top: 10rem;
+                img {
+                    margin-right: 1.7rem;
+                }
+                span {
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .right {
+            width: 50%;
+        }
+    }
+
 }
