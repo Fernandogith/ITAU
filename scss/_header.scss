@@ -10,6 +10,13 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        // Btn Abrir Menu Mobile
+        .btn-menu-responsivo {
+            display: none;
+            img {
+                min-width: 2.3rem
+            }
+        }
         ul {
             display: flex;
             li {
@@ -41,8 +48,6 @@ header {
             padding-left: 4.2rem;
             align-items: center;
             background-color: #106EB0;
-            position: relative;
-            left: 25rem;
             img {
                 max-width: 2rem;
                 margin-right: 1.6rem;
@@ -53,5 +58,162 @@ header {
                 color: #FFFFFF;
             }
         }
+    }
+
+
+    // Menu Responsivo
+    .menu-responsivo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        display: none;
+        align-items: center;
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 1rem;
+        }
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            li {
+                    
+                padding: 1.9rem 1.1rem;
+                transition: all .3s;
+                &:hover {
+                    opacity: 0.4;
+                }
+
+                a {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    color: #000000;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+            }
+        }
+        .line {
+            margin-top: 2rem;
+            width: 80%;
+            height: 1px;
+            background-color: #00000027;
+        }
+        .conta {
+            width: 50%;
+            min-width: 15.4rem;
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background-color: #003499;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                opacity: 0.4;
+            }
+            span {
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: #FFFFFF;
+                white-space: nowrap
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.466);
+        display: none;
+    }
+    
+    @media(max-width: 1280px) {
+        .container {
+            .btn-menu-responsivo {
+                display: flex;
+                transition: all .3s;
+                &:hover {
+                    opacity: 0.4;
+                }
+            }
+            ul {
+                display: none;
+            }
+            .pesquisa {
+                display: none;
+            }
+            .conta {
+                display: none;
+            }
+        }
+        nav.menu-responsivo.active {
+            display: flex;
+            .logo {
+                width: 100%;
+            }
+            .itens {
+                padding: 1.5rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                a {
+                    padding: 0.5rem;
+                    img {
+                        width: 24px;
+                    }
+                    
+                }
+            }
+        }
+
+        .overlay.active {
+            width: 60%;
+            display: flex;
+        }
+    }
+
+    @media(max-width: 600px) {
+
+        // Menu Responsivo
+        .menu-responsivo.active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 70%;
+            .logo {
+                padding: 1rem;
+                width: 100%;
+            }
+            ul {
+                li {
+                    a {
+                        font-size: 1.2rem; 
+                    }
+                }
+            }
+        }
+
+        .overlay.active {
+            width: 30%;
+            
+        }
+
     }
 }

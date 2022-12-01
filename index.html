@@ -15,10 +15,18 @@
 </head>
 <body>
     <header>
+        <!-- Menu Desktop -->
         <div class="container">
             <div class="logo">
                 <img src="./assets/img/logo.svg" alt="">
             </div>
+            
+            <!-- Botão menu responsivo -->
+            <button class="btn-menu-responsivo" onclick="abrirMenu()">
+                <img src="./assets/img/icons/icon-menu-responsivo.svg" alt="">
+            </button>
+            
+            <!-- Navegação -->
             <ul>
                 <li> 
                     <a href="">Para você</a>
@@ -45,6 +53,43 @@
                 <img src="./assets/img/icons/usuario.svg" alt="">
                 <span>Acessar conta</span>
             </div>
+        </div>
+
+        <!-- Menu Responsivo -->
+        <nav class="menu-responsivo" id="menu-responsivo">
+            <div class="logo">
+                <img src="./assets/img/logo.svg" alt="">
+            </div>
+
+            <!-- Navegação -->
+            <ul class="itens">
+                <li> 
+                    <a href="">Para você</a>
+                    <img src="./assets/img/icons/flecha_baixo.svg" alt="">
+                </li>
+                <li> 
+                    <a href="">Para empresas</a>
+                    <img src="./assets/img/icons/flecha_baixo.svg" alt="">
+                </li>
+                <li> 
+                    <a href="">Serviços</a>
+                    <img src="./assets/img/icons/flecha_baixo.svg" alt="">
+                </li>
+                <li> 
+                    <a href="">Ajuda</a>
+                    <img src="./assets/img/icons/flecha_baixo.svg" alt="">
+                </li>
+            </ul>
+            <div class="line"></div>
+            <div class="conta">
+                <img src="./assets/img/icons/usuario.svg" alt="">
+                <span>Acessar conta</span>
+            </div>
+        </nav>
+
+        <!-- Overley Responsivo -->
+        <div class="overlay" id="overlay" onclick="fecharMenu()">
+
         </div>
     </header>
 
@@ -109,5 +154,25 @@
     <!-- scritps -->
     <script src="js/plugins.js"></script>
     <script src="js/all.js"></script>
+
+    <script>
+        function abrirMenu() {
+            const openMenu = document.getElementById("menu-responsivo");
+                openMenu.classList.add("active");
+
+            const openOverlay = document.getElementById("overlay");
+                openOverlay.classList.add("active");
+        
+        }
+
+        function fecharMenu() {
+            const openMenu = document.getElementById("menu-responsivo");
+                openMenu.classList.remove("active");
+
+            const openOverlay = document.getElementById("overlay");
+                openOverlay.classList.remove("active");
+        
+        }
+    </script>
 </body>
 </html>
